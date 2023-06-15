@@ -42,8 +42,9 @@ const cors = require("cors"); // Add this line
 const app = express();
 const port = process.env.PORT || 5000;
 const complaintRouter = require("./router/complaint")
-dotenv.config({ path: './config.env' });
+
 require("./db/conn");
+dotenv.config({ path: './config.env' });
 // const User = require("./model/userSchema")
 app.use(express.json());
 app.use(cors());
